@@ -6,602 +6,592 @@ layout: null
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <meta name="juicyads-site-verification" content="b8200452826fa3c7ca84937d26bdf691">
-    <script>
-    (function() {
-        var hostname = location.hostname;
-        var parts = hostname.split(".");
-        var fullName = parts[0];
-        if (fullName.toLowerCase() === "www") fullName = parts[1] || fullName;
-        var formatText = function(str) {
-            return str.replace(/[-_]/g, " ").replace(/\+/g, " ").replace(/\b\w/g, function(c) { return c.toUpperCase(); });
-        };
-        var displayDomain = formatText(fullName);
-        document.title = displayDomain + " - Beautiful Girls Photo Gallery";
-        var metaDesc = document.querySelector("meta[name=\"description\"]") || document.createElement("meta");
-        metaDesc.name = "description";
-        metaDesc.content = displayDomain + " - Stunning collection of beautiful girls photography from around the world.";
-        if (!metaDesc.parentNode) document.head.appendChild(metaDesc);
-        var metaAuthor = document.querySelector("meta[name=\"author\"]") || document.createElement("meta");
-        metaAuthor.name = "author";
-        metaAuthor.content = displayDomain;
-        if (!metaAuthor.parentNode) document.head.appendChild(metaAuthor);
-        var canonical = document.querySelector("link[rel=\"canonical\"]") || document.createElement("link");
-        canonical.setAttribute("rel", "canonical");
-        canonical.setAttribute("href", location.href);
-        if (!canonical.parentNode) document.head.appendChild(canonical);
-        var schemaData = {"@context":"https://schema.org","@type":"WebSite","name":displayDomain,"description":"Beautiful girls photo gallery from around the world","url":location.origin};
-        var schemaScript = document.createElement("script");
-        schemaScript.type = "application/ld+json";
-        schemaScript.textContent = JSON.stringify(schemaData);
-        document.head.appendChild(schemaScript);
-    })();
-    </script>
-
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <title id="dynamic-title">Leak Archive · Internet Preservation Project</title>
+    <meta id="dynamic-description" name="description" content="Independent digital preservation archive documenting viral content, deleted media, and internet culture history.">
+    <link id="dynamic-canonical" rel="canonical" href="https://example.com/section/">
     <style>
-        /* ===== RESET & BASE ===== */
-        *,*::before,*::after{box-sizing:border-box}
-        html{overflow-x:hidden;background:#050505}
-        body{
-            width:100%;min-width:320px;max-width:100%;margin:0;padding:0;
-            background:#050505;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-            color:#fff;line-height:1.3;-webkit-font-smoothing:antialiased;
+        /* -----------------------------------------------
+           GLOBAL COLOR VARIABLES - MUDAH DIEDIT
+        ----------------------------------------------- */
+        :root {
+            --color-bg-body: #fefefe;
+            --color-text-primary: #1a1a1a;
+            --color-text-secondary: #555;
+            --color-text-muted: #888;
+            --color-text-light: #aaa;
+            --color-link: #0066cc;
+            --color-link-hover: #004999;
+            --color-border: #e5e5e5;
+            --color-border-hover: #ccc;
+            --color-bg-card: #ffffff;
+            --color-bg-card-hover: #fafafa;
+            --color-bg-stat: #f5f5f5;
+            --color-bg-pill: #f0f0f0;
+            --color-bg-pill-hover: #e0e0e0;
+            --color-bg-intro: #f9f9f9;
+            --color-accent-border: #0066cc;
+            --color-heading: #111;
+            --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
         }
 
-        /* ===== HEADER ===== */
-        .site-header{
-            width:100%;position:fixed;top:0;left:0;z-index:1000;
-            background:rgba(5,5,5,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-            border-bottom:1px solid rgba(255,255,255,.08);
-            padding:12px 12px;
-        }
-        .header-inner{
-            display:flex;align-items:center;gap:10px;max-width:1280px;margin:0 auto;
-        }
-        .site-avatar{flex-shrink:0;line-height:0}
-        .site-avatar svg{width:34px;height:34px}
-        .site-title{
-            flex:1;font-size:16px;font-weight:700;letter-spacing:.3px;
-            white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff;
-        }
-        .menu-btn{
-            width:42px;height:42px;flex-shrink:0;
-            background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
-            cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;
-            border-radius:50%;transition:all .2s ease;
-        }
-        .menu-btn:active{background:rgba(255,255,255,.12);transform:scale(.95)}
-        .menu-btn svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round}
-
-        .slide-menu{
-            display:none;position:fixed;top:58px;right:8px;z-index:999;
-            background:#1a1a1a;border:1px solid #333;border-radius:14px;padding:6px;
-            min-width:200px;box-shadow:0 8px 32px rgba(0,0,0,.6);
-        }
-        .slide-menu.open{display:block}
-        .slide-menu ul{list-style:none;margin:0;padding:0}
-        .slide-menu li+li{border-top:1px solid rgba(255,255,255,.04)}
-        .slide-menu a{
-            display:block;padding:13px 16px;color:#ccc;text-decoration:none;
-            font-size:15px;font-weight:500;border-radius:10px;transition:all .15s ease;
-        }
-        .slide-menu a:active{background:#2a2a2a;color:#fff}
-
-        /* ===== DESKTOP NAV (hidden di mobile) ===== */
-        .desktop-nav{display:none}
-
-        /* ===== AD CONTAINER ===== */
-        .ad-box{
-            display:flex;justify-content:center;align-items:center;
-            margin:0 auto;max-width:100%;overflow:hidden;
-            background:#080808;min-height:50px;
-        }
-        .ad-box ins{max-width:100%}
-        
-        /* Responsive ad visibility */
-        .ad-desktop{display:none}
-        .ad-mobile{display:flex}
-        .ad-both{display:flex}
-
-        /* ===== AD BREAK (top & bottom) ===== */
-        .ad-break{
-            padding:12px 0;background:#080808;
-            border-top:1px solid rgba(255,255,255,.04);
-            border-bottom:1px solid rgba(255,255,255,.04);
-        }
-        .ad-break:first-child{margin-top:58px}
-
-        /* ===== AD INLINE (antar section) ===== */
-        .ad-inline{
-            margin:24px 0;padding:12px 0;
-            background:#080808;
-            border-top:1px solid rgba(255,255,255,.03);
-            border-bottom:1px solid rgba(255,255,255,.03);
+        /* reset & base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* ===== MAIN LAYOUT ===== */
-        .main-layout{
-            display:flex;flex-direction:column;gap:0;width:100%;max-width:1280px;
-            margin:0 auto;padding:0;
-        }
-        .content-area{flex:1;min-width:0;padding:0;width:100%}
-
-        .sidebar{display:none}
-        .sticky-ad{position:sticky;top:80px;display:flex;justify-content:center}
-
-        /* ============================
-           GV2 GALLERY SYSTEM
-           ============================ */
-        .gv2-section{margin:20px 0}
-        .gv2-section:first-child{margin-top:4px}
-        .gv2-title{padding:0 8px;margin:0 auto 10px;max-width:1400px}
-        .gv2-title h2{
-            margin:0;font-size:19px;font-weight:800;color:#fff;letter-spacing:.2px;
-        }
-        .gv2-featured-title h2{font-size:21px;color:#ff6b6b}
-        .gv2-grid{max-width:1400px;margin:auto;padding:0;gap:0}
-
-        /* === MOBILE: 1 KOLOM FULLWIDTH === */
-        .gv2-featured{display:grid;grid-template-columns:1fr;gap:4px}
-        .gv2-latest{display:grid;grid-template-columns:1fr;gap:4px}
-        .gv2-stories{display:grid;grid-template-columns:1fr;gap:4px}
-        .gv2-tutorials{display:grid;grid-template-columns:1fr;gap:4px}
-        .gv2-archive{display:grid;grid-template-columns:1fr;gap:4px}
-
-        .gv2-featured-big,
-        .gv2-featured-small{
-            grid-column:auto;grid-row:auto;
+        body {
+            background: var(--color-bg-body);
+            font-family: var(--font-family-base);
+            color: var(--color-text-primary);
+            line-height: 1.5;
         }
 
-        /* Card */
-        .gv2-card{
-            position:relative;overflow:hidden;border-radius:0;background:#0a0a0a;
-            -webkit-tap-highlight-color:transparent;
-        }
-        .gv2-card-link{
-            display:block;width:100%;
-        }
-        .gv2-card-link img{
-            width:100%;height:100%;object-fit:cover;display:block;
-            transition:transform .3s ease;aspect-ratio:16/9;
-        }
-        .gv2-card-link:active img{transform:scale(1.02)}
-
-        /* Card body (di luar link) */
-        .gv2-card-body{
-            padding:10px 10px 12px;
-            background:linear-gradient(to top, rgba(0,0,0,.95) 0%, rgba(10,10,10,1) 100%);
-            z-index:2;
-        }
-        .gv2-card-title-link{
-            color:#fff;text-decoration:none;display:block;
-            margin:0 0 3px;font-size:13px;font-weight:700;line-height:1.25;
-            display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
-            overflow:hidden;
-        }
-        .gv2-card-title-link:active{color:#ff6b6b}
-        .gv2-card-desc{
-            margin:0;font-size:10px;color:rgba(255,255,255,.65);
-            line-height:1.35;
-            overflow:hidden;
-        }
-        /* Biarkan konten deskripsi apa adanya */
-        .gv2-card-desc img,
-        .gv2-card-desc svg,
-        .gv2-card-desc iframe,
-        .gv2-card-desc script,
-        .gv2-card-desc style{display:none!important}
-        .gv2-card-desc *{
-            font-size:inherit!important;color:inherit!important;
-            margin:0!important;padding:0!important;
-            background:none!important;border:none!important;
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem;
         }
 
-        .excerpt{display:none}
-
-        /* ============================
-           TABLET (min-width:600px)
-           ============================ */
-        @media(min-width:600px){
-            .ad-desktop{display:flex}
-            .ad-mobile{display:none}
-            .ad-both{display:flex}
-
-            .site-header{padding:12px 16px}
-            .site-title{font-size:17px}
-            .ad-break{padding:16px 0}
-            .ad-break:first-child{margin-top:60px}
-            .ad-inline{margin:28px 0;padding:14px 0}
-            .gv2-title{padding:0 12px}
-            .gv2-title h2{font-size:22px}
-            .gv2-grid{padding:0 8px;gap:6px}
-
-            .gv2-featured{grid-template-columns:1fr 1fr;gap:6px}
-            .gv2-featured-big{grid-column:1 / -1}
-            .gv2-latest{grid-template-columns:1fr 1fr;gap:6px}
-            .gv2-stories{grid-template-columns:1fr 1fr;gap:6px}
-            .gv2-tutorials{grid-template-columns:1fr 1fr;gap:6px}
-            .gv2-archive{grid-template-columns:1fr 1fr;gap:6px}
-
-            .gv2-card{border-radius:6px}
-            .gv2-card-link img{aspect-ratio:9/16}
-            .gv2-card-body{padding:12px 12px 14px}
-            .gv2-card-title-link{font-size:14px}
-            .gv2-card-desc{font-size:11px}
+        /* typography - clean & readable */
+        .site-title {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-text-muted);
+            margin-bottom: 1rem;
         }
 
-        /* ============================
-           DESKTOP (min-width:900px)
-           ============================ */
-        @media(min-width:900px){
-            body{max-width:1280px;margin:0 auto}
-
-            .site-header{
-                left:50%;transform:translateX(-50%);max-width:1280px;
-                padding:12px 20px;
-            }
-            .site-title{font-size:15px;font-weight:600;color:#ccc}
-            .menu-btn{display:none}
-            .slide-menu{display:none!important}
-
-            .ad-break:first-child{margin-top:62px}
-
-            .main-layout{flex-direction:row;padding:0 8px}
-            .sidebar{display:block;flex-shrink:0;padding:16px 8px;position:relative}
-            .sidebar-left{width:160px;border-right:1px solid rgba(255,255,255,.03)}
-            .sidebar-right{width:160px;border-left:1px solid rgba(255,255,255,.03)}
-
-            .gv2-section{margin:32px 0}
-            .gv2-section:first-child{margin-top:8px}
-            .gv2-title{padding:0 14px}
-            .gv2-title h2{font-size:22px}
-            .gv2-grid{padding:0 14px;gap:10px}
-
-            .gv2-featured{
-                grid-template-columns:2fr 1fr 1fr;
-                grid-template-rows:1fr 1fr;gap:10px;
-            }
-            .gv2-featured-big{
-                grid-column:1 / 2;grid-row:1 / 3;
-            }
-            .gv2-featured-big .gv2-card-link img{aspect-ratio:auto;height:100%}
-            .gv2-featured-small{grid-column:auto;grid-row:auto}
-            .gv2-featured-small .gv2-card-link img{aspect-ratio:9/16}
-
-            .gv2-latest{grid-template-columns:repeat(5,1fr);gap:10px}
-            .gv2-stories{grid-template-columns:repeat(4,1fr);gap:10px}
-            .gv2-tutorials{grid-template-columns:repeat(3,1fr);gap:10px}
-            .gv2-archive{grid-template-columns:repeat(6,1fr);gap:10px}
-
-            .gv2-card{border-radius:12px}
-            .gv2-card:hover .gv2-card-link img{transform:scale(1.05)}
-            .gv2-card-title-link:hover{color:#ff6b6b;text-decoration:underline}
-
-            /* Desktop nav: muncul */
-            .desktop-nav{
-                display:flex;gap:4px;padding:0 14px;max-width:1400px;margin:0 auto 8px;
-            }
-            .desktop-nav a{
-                padding:6px 12px;color:#999;text-decoration:none;font-size:13px;
-                border-radius:6px;transition:all .15s ease;
-            }
-            .desktop-nav a:hover{color:#fff;background:rgba(255,255,255,.04)}
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            color: var(--color-heading);
         }
 
-        /* ============================
-           LARGE DESKTOP (min-width:1100px)
-           ============================ */
-        @media(min-width:1100px){
-            .sidebar-left{width:180px}
-            .sidebar-right{width:180px}
-            .gv2-grid{gap:12px}
-            .gv2-featured{gap:12px}
-            .gv2-latest{gap:12px}
-            .gv2-stories{gap:12px}
-            .gv2-tutorials{gap:12px}
-            .gv2-archive{gap:12px}
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0 0 0.25rem;
+        }
+
+        a {
+            color: var(--color-link);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: var(--color-link-hover);
+        }
+
+        /* breadcrumb */
+        .breadcrumb {
+            font-size: 0.7rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--color-text-muted);
+        }
+
+        .breadcrumb span:last-child {
+            color: var(--color-text-primary);
+        }
+
+        /* stat bar minimal */
+        .stat-bar {
+            background: var(--color-bg-stat);
+            padding: 0.5rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            color: var(--color-text-secondary);
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* cards - compact */
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        .entry-card {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            transition: all 0.15s;
+        }
+
+        .entry-card:hover {
+            border-color: var(--color-border-hover);
+            background: var(--color-bg-card-hover);
+        }
+
+        .entry-card .tag {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .entry-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 0.25rem 0;
+        }
+
+        .entry-card p {
+            font-size: 0.75rem;
+            color: var(--color-text-secondary);
+            margin: 0.25rem 0 0;
+        }
+
+        /* tag cloud */
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .pill {
+            background: var(--color-bg-pill);
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: var(--color-text-primary);
+        }
+
+        .pill:hover {
+            background: var(--color-bg-pill-hover);
+            text-decoration: none;
+        }
+
+        /* faq compact */
+        .faq-compact {
+            margin: 1rem 0;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin: 0.75rem 0 0.25rem;
+        }
+
+        .faq-a {
+            font-size: 0.75rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer-note {
+            font-size: 0.65rem;
+            color: var(--color-text-light);
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .default-home {
+            display: block;
+        }
+
+        .query-page {
+            display: none;
+        }
+
+        @media (max-width: 560px) {
+            .page { padding: 1.25rem; }
+            h1 { font-size: 1.6rem; }
         }
     </style>
-    
 {% include head.html %}
-{% include verif.html %}
+  </head>
+<body><div loading="lazy">
+<nav>
+{% include /kw/p/session.html %}
+{% include /kw/p/special.html %}
+</nav>
 
-</head>
-<body>
+<div class="page">
+    <!-- DEFAULT HOMEPAGE -->
+    <div id="default-home" class="default-home">
+        <div class="site-title">LEAK ARCHIVE · v4</div>
+        <h1>Internet Preservation<br>Leak Archive</h1>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1rem;">Documenting viral content, deleted media, and ephemeral internet culture since 2022.</p>
 
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="header-inner">
-            <div id="domainAvatar" class="site-avatar"></div>
-            <span id="blogMainTitle" class="site-title"></span>
-            <button class="menu-btn" id="blogMenuToggle" aria-label="Menu">
-                <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-                <svg viewBox="0 0 24 24" style="display:none"><path d="M6 6l12 12M6 18l12-12"/></svg>
-            </button>
+        <div class="stat-bar">
+            <span>📁 <strong>14.2k</strong> entries</span>
+            <span>🌐 <strong>800+</strong> sources</span>
+            <span>🔄 <strong>daily</strong> updates</span>
         </div>
-    </header>
 
-    <!-- SLIDE MENU -->
-    <nav id="blogMenuPanel" class="slide-menu">
-        <ul>
-            <li><a href="/">🏠 Home</a></li>
-            <li><a href="/contact/">📩 Contact</a></li>
-            <li><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
-            <li><a href="/terms-and-conditions/">📋 Terms & Conditions</a></li>
-        </ul>
-    </nav>
-
-    <script>
-    (function(){
-        var host = window.location.hostname.split(".");
-        var sub = host[0];
-        if (sub.toLowerCase() === "www") sub = host[1] || "";
-        var clean = sub.replace(/-/g, " ");
-        document.getElementById("blogMainTitle").textContent = clean.replace(/\b\w/g, function(c) { return c.toUpperCase(); });
-    })();
-    (function(){
-        var btn = document.getElementById("blogMenuToggle");
-        var panel = document.getElementById("blogMenuPanel");
-        var menuIcon = btn.querySelector("svg:first-child");
-        var closeIcon = btn.querySelector("svg:last-child");
-        btn.addEventListener("click", function(e){
-            e.stopPropagation();
-            var open = panel.classList.toggle("open");
-            menuIcon.style.display = open ? "none" : "block";
-            closeIcon.style.display = open ? "block" : "none";
-        });
-        document.addEventListener("click", function(e){
-            if(!panel.contains(e.target) && !btn.contains(e.target)){
-                panel.classList.remove("open");
-                menuIcon.style.display = "block";
-                closeIcon.style.display = "none";
-            }
-        });
-        panel.addEventListener("click", function(e){
-            e.stopPropagation();
-        });
-    })();
-    </script>
-
-    <!-- ==================== BANNER 06: TOP ==================== -->
-    <div class="ad-break">
-        <div class="ad-box ad-desktop">
-            {% include /ads/banner/06.html %}
+        <div class="card-list">
+            <div class="entry-card">
+                <div class="tag">TRENDING ARCHIVE</div>
+                <h4>Viral Content Index</h4>
+                <p>Most referenced leaked content this month across preservation networks.</p>
+                <a href="/section/?q=viral+leak+archive">Explore →</a>
+            </div>
+            <div class="entry-card">
+                <div class="tag">MEDIA PRESERVATION</div>
+                <h4>Deleted Video Archive</h4>
+                <p>Preserved clips that were removed from major platforms.</p>
+                <a href="/section/?q=deleted+video+archive">Watch archive →</a>
+            </div>
+            <div class="entry-card">
+                <div class="tag">IMAGE PRESERVATION</div>
+                <h4>Ephemeral Photo Collection</h4>
+                <p>Images that circulated briefly before disappearing.</p>
+                <a href="/section/?q=ephemeral+photo+archive">Browse →</a>
+            </div>
+            <div class="entry-card">
+                <div class="tag">DEEP ARCHIVE</div>
+                <h4>Underground Preservation Vault</h4>
+                <p>Hard-to-find content from private preservation circles.</p>
+                <a href="/section/?q=deep+preservation+vault">Enter vault →</a>
+            </div>
         </div>
-        <div class="ad-box ad-mobile">
-            {% include /ads/banner/04.html %}
+
+        <div class="tag-cloud">
+            <a href="/section/?q=instagram+preservation" class="pill">#InstagramPreservation</a>
+            <a href="/section/?q=tiktok+archive" class="pill">#TikTokArchive</a>
+            <a href="/section/?q=deleted+content" class="pill">#DeletedContent</a>
+            <a href="/section/?q=telegram+archive" class="pill">#TelegramArchive</a>
+            <a href="/section/?q=discord+preservation" class="pill">#DiscordPreservation</a>
+            <a href="/section/?q=viral+history" class="pill">#ViralHistory</a>
         </div>
     </div>
 
-    <!-- DESKTOP NAV -->
-    <nav class="desktop-nav">
-        <a href="/">Home</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy-policy/">Privacy Policy</a>
-        <a href="/terms-and-conditions/">Terms & Conditions</a>
-    </nav>
-
-    <!-- MAIN LAYOUT -->
-    <div class="main-layout">
-
-        <!-- LEFT SIDEBAR: Banner 05 -->
-        <aside class="sidebar sidebar-left">
-            <div class="sticky-ad">
-                {% include /ads/banner/05.html %}
-            </div>
-        </aside>
-
-        <!-- MAIN CONTENT -->
-        <main class="content-area">
-
-            <!-- ========== FEATURED ========== -->
-            {% assign featured_posts = site.posts | slice: 0, 5 %}
-            {% if featured_posts.size >= 5 %}
-            <section class="gv2-section">
-                <div class="gv2-title gv2-featured-title">
-                    <h2>🔥 Featured</h2>
-                </div>
-                <div class="gv2-grid gv2-featured">
-                    {% for post in featured_posts %}
-                    <article class="gv2-card {% if forloop.first %}gv2-featured-big{% else %}gv2-featured-small{% endif %}">
-                        <a href="https://ngaloco.my.id{{ post.url }}" class="gv2-card-link">
-                            {% if post.image %}
-                                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
-                            {% endif %}
-                        </a>
-                        <div class="gv2-card-body">
-                            <a href="https://ngaloco.my.id{{ post.url }}" class="gv2-card-title-link">{{ post.title }}</a>
-                            <div class="gv2-card-desc">
-                                {% assign before_svg = post.content | split: '<p>' | first %}
-                                {{ before_svg }}
-                            </div>
-                        </div>
-                    </article>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endif %}
-
-            <!-- ========== BANNER 01: SETELAH FEATURED ========== -->
-            <div class="ad-inline">
-                <div class="ad-box ad-desktop">
-                    {% include /ads/banner/01.html %}
-                </div>
-                <div class="ad-box ad-mobile">
-                    {% include /ads/banner/04.html %}
-                </div>
-            </div>
-
-            <!-- ========== LATEST ========== -->
-            {% assign latest_posts = site.posts | slice: 5, 5 %}
-            {% if latest_posts.size > 0 %}
-            <section class="gv2-section">
-                <div class="gv2-title"><h2>🆕 Latest</h2></div>
-                <div class="gv2-grid gv2-latest">
-                    {% for post in latest_posts %}
-                    <article class="gv2-card">
-                        <a href="https://ngaloco.my.id{{ post.url }}" class="gv2-card-link">
-                            {% if post.image %}
-                                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
-                            {% endif %}
-                        </a>
-                        <div class="gv2-card-body">
-                            <a href="https://ngaloco.my.id{{ post.url }}" class="gv2-card-title-link">{{ post.title }}</a>
-                            <div class="gv2-card-desc">
-                                {% assign before_svg = post.content | split: '<p>' | first %}
-                                {{ before_svg }}
-                            </div>
-                        </div>
-                    </article>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endif %}
-
-            <!-- ========== BANNER 02: SETELAH LATEST ========== -->
-            <div class="ad-inline">
-                <div class="ad-box ad-both">
-                    {% include /ads/banner/02.html %}
-                </div>
-            </div>
-
-            <!-- ========== STORIES ========== -->
-            {% assign stories_posts = site.posts | slice: 10, 4 %}
-            {% if stories_posts.size > 0 %}
-            <section class="gv2-section">
-                <div class="gv2-title"><h2>📖 Stories</h2></div>
-                <div class="gv2-grid gv2-stories">
-                    {% for post in stories_posts %}
-                    <article class="gv2-card">
-                        <a href="https://ngaloco.my.id{{ post.url }}" class="gv2-card-link">
-                            {% if post.image %}
-                                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
-                            {% endif %}
-                        </a>
-                        <div class="gv2-card-body">
-                            <a href="https://ngaloco.my.id{{ post.url }}" class="gv2-card-title-link">{{ post.title }}</a>
-                            <div class="gv2-card-desc">
-                                {% assign before_svg = post.content | split: '<p>' | first %}
-                                {{ before_svg }}
-                            </div>
-                        </div>
-                    </article>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endif %}
-
-            <!-- ========== BANNER 03: SETELAH STORIES ========== -->
-            <div class="ad-inline">
-                <div class="ad-box ad-both">
-                    {% include /ads/banner/03.html %}
-                </div>
-            </div>
-
-            <!-- ========== POPULAR ========== -->
-            {% assign popular_posts = site.posts | slice: 14, 6 %}
-            {% if popular_posts.size > 0 %}
-            <section class="gv2-section">
-                <div class="gv2-title"><h2>🔥 Popular</h2></div>
-                <div class="gv2-grid gv2-tutorials">
-                    {% for post in popular_posts %}
-                    <article class="gv2-card">
-                        <a href="https://ngaloco.my.id{{ post.url }}" class="gv2-card-link">
-                            {% if post.image %}
-                                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
-                            {% endif %}
-                        </a>
-                        <div class="gv2-card-body">
-                            <a href="https://ngaloco.my.id{{ post.url }}" class="gv2-card-title-link">{{ post.title }}</a>
-                            <div class="gv2-card-desc">
-                                {% assign before_svg = post.content | split: '<p>' | first %}
-                                {{ before_svg }}
-                            </div>
-                        </div>
-                    </article>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endif %}
-
-            <!-- ========== BANNER 08: SETELAH POPULAR ========== -->
-            <div class="ad-inline">
-                <div class="ad-box ad-both">
-                    {% include /ads/banner/08.html %}
-                </div>
-            </div>
-
-            <!-- ========== ARCHIVE ========== -->
-            {% assign archive_posts = site.posts | slice: 20, 5 %}
-            {% if archive_posts.size > 0 %}
-            <section class="gv2-section">
-                <div class="gv2-title"><h2>📁 Archive</h2></div>
-                <div class="gv2-grid gv2-archive">
-                    {% for post in archive_posts %}
-                    <article class="gv2-card">
-                        <a href="https://ngaloco.my.id{{ post.url }}" class="gv2-card-link">
-                            {% if post.image %}
-                                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
-                            {% endif %}
-                        </a>
-                        <div class="gv2-card-body">
-                            <a href="https://ngaloco.my.id{{ post.url }}" class="gv2-card-title-link">{{ post.title }}</a>
-                            <div class="gv2-card-desc">
-                                {% assign before_svg = post.content | split: '<p>' | first %}
-                                {{ before_svg }}
-                            </div>
-                        </div>
-                    </article>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endif %}
-
-        </main>
-
-        <!-- RIGHT SIDEBAR: Banner 05 -->
-        <aside class="sidebar sidebar-right">
-            <div class="sticky-ad">
-                {% include /ads/banner/05.html %}
-            </div>
-        </aside>
-
-    </div>
-
-    <!-- ==================== BANNER 07: BOTTOM ==================== -->
-    <div class="ad-break">
-        <div class="ad-box ad-desktop">
-            {% include /ads/banner/07.html %}
+    <!-- QUERY-BASED PAGE (leak-focused) -->
+    <div id="query-page" class="query-page">
+        <div class="site-title">LEAK ARCHIVE / <span id="breadcrumb-type">preservation</span></div>
+        <div class="breadcrumb">
+            <a href="/">home</a> / <a href="/section/">archive</a> / <span id="bc-name"></span>
         </div>
-        <div class="ad-box ad-mobile">
-            {% include /ads/banner/04.html %}
+
+        <h1 id="main-title"></h1>
+
+        <div class="stat-bar" id="stat-dynamic"></div>
+
+        <!-- INTRO BOX (preservation tone) -->
+        <div id="intro-preserve" style="background: var(--color-bg-intro); padding: 0.75rem 1rem; border-radius: 12px; margin: 1rem 0; font-size: 0.8rem; border-left: 3px solid var(--color-accent-border);">
+            <p id="intro-text"></p>
+        </div>
+
+        <!-- SECTION: LEAK ORIGIN -->
+        <h2 id="origin-heading">🌐 Origin & Context</h2>
+        <div class="card-list" id="origin-list"></div>
+
+        <!-- SECTION: PRESERVED MEDIA -->
+        <h2 id="media-heading">📦 Preserved Media</h2>
+        <div class="card-list" id="media-list"></div>
+
+        <!-- SECTION: PLATFORM FOOTPRINT -->
+        <h2 id="platform-heading">🌍 Platform Footprint</h2>
+        <div class="card-list" id="platform-list"></div>
+
+        <!-- SECTION: RELATED PRESERVATIONS -->
+        <h2 id="related-heading">🔗 Related Preservation Entries</h2>
+        <div class="tag-cloud" id="related-tags"></div>
+
+        <!-- SECTION: PRESERVATION NOTES -->
+        <h2 id="notes-heading">📌 Preservation Notes</h2>
+        <div class="faq-compact" id="preservation-notes"></div>
+
+        <hr />
+        <div class="footer-note">
+            Internet preservation project · Archived <span id="archive-date"></span>
         </div>
     </div>
+</div>
 
-    <!-- AVATAR SCRIPT -->
-    <script>
-    (function() {
-        var hostname = window.location.hostname;
-        var parts = hostname.split(".");
-        var fullName = parts[0];
-        if (fullName.toLowerCase() === "www") fullName = parts[1] || fullName;
-        function h(s) {var h=0;for(var i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0;}return Math.abs(h);}
-        var dh = h(fullName);
-        var clean = fullName.replace(/-/g," ");
-        var w = clean.split(" "), init = "";
-        for (var i=0;i<Math.min(w.length,3);i++){if(w[i].length>0)init+=w[i].charAt(0).toUpperCase();}
-        if(init.length<2)init=fullName.substring(0,3).toUpperCase();
-        document.getElementById("domainAvatar").innerHTML = "<svg width=\"34\" height=\"34\" viewBox=\"0 0 34 34\"><rect width=\"34\" height=\"34\" rx=\"17\" fill=\"hsl("+(dh%360)+",60%,50%)\"/><text x=\"17\" y=\"23\" text-anchor=\"middle\" fill=\"#fff\" font-size=\"14\" font-weight=\"bold\" font-family=\"sans-serif\">"+init+"</text></svg>";
-    })();
-    </script>
+<script>
+(function() {
+    // ==========================================
+    // FUNGSI UTILITY: Mendapatkan identitas domain/subdomain
+    // ==========================================
+    function getDomainIdentity() {
+        const hostname = window.location.hostname; // contoh: "sub-domain.fazri.my" atau "fazri.my"
+        
+        // Pisahkan berdasarkan titik
+        const parts = hostname.split('.');
+        
+        // Handle localhost atau IP
+        if (hostname === 'localhost' || hostname.match(/^\d+\.\d+\.\d+\.\d+$/)) {
+            return 'Local';
+        }
+        
+        // Cek apakah ini subdomain (lebih dari 2 bagian, dan bukan domain umum seperti .co.uk)
+        // Subdomain biasanya punya 3 bagian atau lebih: [subdomain].[domain].[tld]
+        if (parts.length >= 3) {
+            // Ambil bagian pertama sebagai subdomain
+            let subdomain = parts[0];
+            // Format subdomain: huruf pertama kapital, sisanya kecil
+            subdomain = subdomain.charAt(0).toUpperCase() + subdomain.slice(1).toLowerCase();
+            return subdomain;
+        } 
+        else if (parts.length === 2) {
+            // Domain utama: ambil bagian sebelum TLD
+            let domainName = parts[0];
+            domainName = domainName.charAt(0).toUpperCase() + domainName.slice(1).toLowerCase();
+            return domainName;
+        }
+        else {
+            // Fallback
+            return 'Archive';
+        }
+    }
 
+    // ==========================================
+    // FUNGSI UTILITY: Format query untuk tampilan
+    // ==========================================
+    function formatQueryForDisplay(rawQuery) {
+        // Ubah query menjadi format Title Case
+        return rawQuery.split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+            .join(' ');
+    }
+
+    // ==========================================
+    // AMBIL QUERY DARI URL
+    // ==========================================
+    const params = new URLSearchParams(window.location.search);
+    let query = params.get('q');
+
+    const defaultDiv = document.getElementById('default-home');
+    const queryDiv = document.getElementById('query-page');
+
+    // Jika tidak ada query, tampilkan homepage
+    if (!query) {
+        defaultDiv.style.display = 'block';
+        queryDiv.style.display = 'none';
+        return;
+    }
+
+    defaultDiv.style.display = 'none';
+    queryDiv.style.display = 'block';
+
+    // Decode query
+    query = decodeURIComponent(query.replace(/\+/g, ' '));
     
-    {% include /ads/gobloggugel/default.html %}
-    {% include footer.html %}
-
+    // Format query untuk display
+    const formattedQuery = formatQueryForDisplay(query);
     
-</body>
+    // Dapatkan identitas domain/subdomain
+    const domainIdentity = getDomainIdentity();
+    
+    // ==========================================
+    // BUAT VARIAN KALIMAT UNTUK TITLE, H1, H2, H3
+    // ==========================================
+    // Title untuk <head>
+    const pageTitle = `${formattedQuery} on ${domainIdentity} · Leak Archive`;
+    document.title = pageTitle;
+    
+    // H1 (paling atas, tidak ada section lain yang menghalangi)
+    const h1Element = document.getElementById('main-title');
+    if (h1Element) {
+        h1Element.innerHTML = `${formattedQuery} <span style="font-size:0.8rem; font-weight:normal;">on ${domainIdentity}</span>`;
+    }
+    
+    // H2 untuk setiap section (konsisten dengan tema query + domain)
+    const originHeading = document.getElementById('origin-heading');
+    if (originHeading) {
+        originHeading.innerHTML = `🌐 ${formattedQuery} · Origin & Context on ${domainIdentity}`;
+    }
+    
+    const mediaHeading = document.getElementById('media-heading');
+    if (mediaHeading) {
+        mediaHeading.innerHTML = `📦 ${formattedQuery} · Preserved Media on ${domainIdentity}`;
+    }
+    
+    const platformHeading = document.getElementById('platform-heading');
+    if (platformHeading) {
+        platformHeading.innerHTML = `🌍 ${formattedQuery} · Platform Footprint on ${domainIdentity}`;
+    }
+    
+    const relatedHeading = document.getElementById('related-heading');
+    if (relatedHeading) {
+        relatedHeading.innerHTML = `🔗 ${formattedQuery} · Related Preservation Entries on ${domainIdentity}`;
+    }
+    
+    const notesHeading = document.getElementById('notes-heading');
+    if (notesHeading) {
+        notesHeading.innerHTML = `📌 ${formattedQuery} · Preservation Notes on ${domainIdentity}`;
+    }
+    
+    // ==========================================
+    // SISANYA TETAP SAMA (TIDAK BERUBAH)
+    // ==========================================
+    
+    // clean base name (preserve 'leak' keyword context) - untuk konten dinamis lainnya
+    const removeTerms = ['archive', 'preservation', 'index', 'collection', 'vault', '2024', '2025', '2026', 'content', 'media', 'viral', 'deleted', 'ephemeral'];
+    let baseRaw = query.toLowerCase();
+    removeTerms.forEach(term => {
+        const regex = new RegExp('\\b' + term + '\\b', 'gi');
+        baseRaw = baseRaw.replace(regex, '');
+    });
+    baseRaw = baseRaw.replace(/\s+/g, ' ').trim();
+    let baseName = baseRaw || query;
+    if (baseName.length < 2) baseName = query;
+    
+    const displayName = formatQueryForDisplay(baseName);
+    const displayLower = displayName.toLowerCase();
+    
+    // detect leak context type
+    const qLow = query.toLowerCase();
+    let leakType = 'general';
+    if (qLow.includes('video') || qLow.includes('clip') || qLow.includes('footage')) leakType = 'video';
+    else if (qLow.includes('photo') || qLow.includes('image') || qLow.includes('picture') || qLow.includes('gallery')) leakType = 'photo';
+    else if (qLow.includes('instagram') || qLow.includes('tiktok') || qLow.includes('telegram') || qLow.includes('discord') || qLow.includes('twitter')) leakType = 'platform';
+    else if (qLow.includes('bio') || qLow.includes('profile') || qLow.includes('background')) leakType = 'bio';
+    
+    // meta description (tetap)
+    let metaDesc = '';
+    if (leakType === 'video') {
+        metaDesc = `Preserved video archive of ${formattedQuery}. Documenting deleted content and viral clips for internet history purposes.`;
+    } else if (leakType === 'photo') {
+        metaDesc = `Preserved image collection of ${formattedQuery}. Documenting deleted and viral photos. Internet preservation project.`;
+    } else if (leakType === 'platform') {
+        metaDesc = `Cross-platform preservation of ${formattedQuery}. Documenting deleted posts and viral content across social media.`;
+    } else if (leakType === 'bio') {
+        metaDesc = `Background and context for ${formattedQuery} within the internet preservation archive.`;
+    } else {
+        metaDesc = `Complete preservation archive of ${formattedQuery}. Documenting deleted media, viral content, and internet ephemera.`;
+    }
+    const metaTag = document.getElementById('dynamic-description');
+    if (metaTag) metaTag.setAttribute('content', metaDesc);
+    
+    document.getElementById('bc-name').innerText = displayName;
+    document.getElementById('breadcrumb-type').innerText = leakType;
+    
+    // intro text
+    const introEl = document.getElementById('intro-text');
+    if (leakType === 'video') {
+        introEl.innerHTML = `This preservation entry documents deleted and viral video content associated with <strong>${displayName}</strong>. All materials are archived for internet history and research purposes.`;
+    } else if (leakType === 'photo') {
+        introEl.innerHTML = `Preserved image collection for <strong>${displayName}</strong>. Includes ephemeral and deleted photos that circulated on social platforms. Part of the independent internet archive.`;
+    } else if (leakType === 'platform') {
+        introEl.innerHTML = `Platform preservation record for <strong>${displayName}</strong>. Documents deleted posts, viral threads, and preserved content from major social networks.`;
+    } else if (leakType === 'bio') {
+        introEl.innerHTML = `Contextual background for <strong>${displayName}</strong> within the preservation archive. Understanding the origin and impact of associated viral content.`;
+    } else {
+        introEl.innerHTML = `Complete preservation archive for <strong>${displayName}</strong>. Includes preserved media, platform documentation, and contextual background. Maintained for internet history reference.`;
+    }
+    
+    // helper: internal link generator
+    function makeLink(variant, label) {
+        const newQuery = `${displayLower} ${variant}`;
+        return `<a href="/section/?q=${encodeURIComponent(newQuery)}">${label}</a>`;
+    }
+    
+    // ORIGIN LIST
+    const originItems = [
+        { variant: 'origin source', label: 'Origin & First Appearance', desc: 'Where this content first emerged' },
+        { variant: 'viral timeline', label: 'Viral Timeline', desc: 'How it spread across platforms' },
+        { variant: 'preservation context', label: 'Preservation Context', desc: 'Why this was archived' }
+    ];
+    document.getElementById('origin-list').innerHTML = originItems.map(item => `
+        <div class="entry-card"><div class="tag">📡 CONTEXT</div><h4>${item.label}</h4><p>${item.desc}</p>${makeLink(item.variant, 'View context →')}</div>
+    `).join('');
+    
+    // MEDIA LIST
+    const mediaItems = [
+        { variant: 'video preservation', label: 'Video Preservation Set', desc: 'Archived video content' },
+        { variant: 'photo preservation', label: 'Photo Preservation Set', desc: 'Archived image collection' },
+        { variant: 'full media dump', label: 'Complete Media Archive', desc: 'All preserved files' },
+        { variant: 'rare finds', label: 'Rare / Hard-to-Find', desc: 'Limited circulation content' }
+    ];
+    document.getElementById('media-list').innerHTML = mediaItems.map(item => `
+        <div class="entry-card"><div class="tag">📦 MEDIA</div><h4>${item.label}</h4><p>${item.desc}</p>${makeLink(item.variant, 'Access archive →')}</div>
+    `).join('');
+    
+    // PLATFORM LIST
+    const platformItems = [
+        { variant: 'instagram preservation', label: 'Instagram Archive', desc: 'Deleted stories & posts' },
+        { variant: 'tiktok preservation', label: 'TikTok Archive', desc: 'Removed videos' },
+        { variant: 'telegram archive', label: 'Telegram Preservation', desc: 'Channel archives' },
+        { variant: 'discord preservation', label: 'Discord Archive', desc: 'Server preservation' },
+        { variant: 'twitter archive', label: 'Twitter/X Archive', desc: 'Deleted threads & tweets' }
+    ];
+    document.getElementById('platform-list').innerHTML = platformItems.map(item => `
+        <div class="entry-card"><div class="tag">🌍 PLATFORM</div><h4>${item.label}</h4><p>${item.desc}</p>${makeLink(item.variant, 'View →')}</div>
+    `).join('');
+    
+    // RELATED TAGS
+    const relatedQueries = [
+        `${displayLower} viral leak`, `${displayLower} deleted content`, `${displayLower} preservation`,
+        `${displayLower} internet archive`, `viral content history`, `deleted media archive`,
+        `ephemeral content`, `internet preservation project`, `digital ephemera`
+    ];
+    document.getElementById('related-tags').innerHTML = relatedQueries.map(q => 
+        `<a href="/section/?q=${encodeURIComponent(q)}" class="pill">#${q.replace(/ /g, '_')}</a>`
+    ).join('');
+    
+    // PRESERVATION NOTES
+    const notes = [
+        { q: `Why is ${displayName} in this archive?`, a: `This entry is preserved as part of an independent effort to document viral internet culture and deleted media for research and historical reference.` },
+        { q: `How is content verified?`, a: `All preserved materials are cross-referenced from documented sources. This is a reference archive, not a hosting service.` },
+        { q: `Can content be removed?`, a: `This is a static preservation project. For inquiries, refer to the project documentation.` }
+    ];
+    document.getElementById('preservation-notes').innerHTML = notes.map(n => `
+        <div class="faq-q">🔍 ${n.q}</div>
+        <div class="faq-a">${n.a}</div>
+    `).join('');
+    
+    // dynamic stat bar
+    const today = new Date();
+    const archiveDate = today.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+    document.getElementById('archive-date').innerText = archiveDate;
+    
+    const statDiv = document.getElementById('stat-dynamic');
+    statDiv.innerHTML = `
+        <span>🗂️ <strong>entry</strong> ${displayLower.substring(0,12)}</span>
+        <span>🏷️ <strong>type</strong> ${leakType}</span>
+        <span>🕒 <strong>archived</strong> ${archiveDate}</span>
+        <span>🔍 <strong>status</strong> preserved</span>
+    `;
+    
+    // CANONICAL LINK DINAMIS
+    const canonicalLink = document.getElementById('dynamic-canonical');
+    if (canonicalLink) {
+        const fullUrl = window.location.href;
+        canonicalLink.setAttribute('href', fullUrl);
+    }
+})();
+</script>
+{% include /ads/gobloggugel/default.html %}
+{% include footer.html %}
+
+</div></body>
 </html>
